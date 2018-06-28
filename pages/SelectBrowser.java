@@ -23,8 +23,7 @@ public class SelectBrowser
 			driver = new InternetExplorerDriver();
 		driver.manage().window().maximize();
 		driver.get(url);
-		//driver.findElement(By.xpath("//*[@a='#panel1']//ancestor::div[2]//ancestor::div[1]//ancestor::div[1]")).click();
-		driver.findElement(By.xpath("//*[@id=\"demo-2\"]/div/div[2]/ul/li[1]/a")).click();
+		driver.findElement(By.xpath("//a[@href='#panel1']")).click();
 		return driver;
 	}
 }

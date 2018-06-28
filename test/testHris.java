@@ -54,15 +54,15 @@ public class testHris
 	}
 	
 	@Test(dependsOnMethods = {"Total_Time_Shown_In_HRIS_Timesheet_Should_Be_Correct"})
-	public void after_Clicking_On_Logout_Button_User_Should_Redirect_To_Login_Page()
+	public void after_Clicking_On_Logout_Button_User_Should_Be_Able_To_See_Copyright_Text()
 	{
 		logout.logout_User();
 		WebElement logout_check = driver.findElement(By.xpath("//footer/div/div[2]/p"));
 		Assert.assertTrue(logout_check.getText().contains("QAITHRIS Copyright QA InfoTech Pvt. Ltd. 2018 rights reserved."));
 	}
 	
-	@Test(dependsOnMethods = {"after_Clicking_On_Logout_Button_User_Should_Redirect_To_Login_Page"})
-	public void after_Clicking_On_Logout_Button_User_Should_Be_Show_Copyright_Text()
+	@Test(dependsOnMethods = {"after_Clicking_On_Logout_Button_User_Should_Be_Able_To_See_Copyright_Text"})
+	public void after_Clicking_On_Logout_Button_User_Should_Redirect_To_Login_Page()
 	{
 		assertEquals(driver.getCurrentUrl(),"https://hris.qainfotech.com/login.php");
 	}

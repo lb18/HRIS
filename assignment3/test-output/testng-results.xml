@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="15255" started-at="2018-06-28T12:27:51Z" finished-at="2018-06-28T12:28:06Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="15255" started-at="2018-06-28T12:27:51Z" finished-at="2018-06-28T12:28:06Z">
+      <class name="test.testHris">
+        <test-method status="PASS" signature="init()[pri:0, instance:test.testHris@1f57539]" name="init" is-config="true" duration-ms="7724" started-at="2018-06-28T12:27:51Z" finished-at="2018-06-28T12:27:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- init -->
+        <test-method status="PASS" signature="username_Field_Is_Empty_Should_Load_The_Same_Page_Again()[pri:0, instance:test.testHris@1f57539]" name="username_Field_Is_Empty_Should_Load_The_Same_Page_Again" duration-ms="336" started-at="2018-06-28T12:27:58Z" finished-at="2018-06-28T12:27:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- username_Field_Is_Empty_Should_Load_The_Same_Page_Again -->
+        <test-method status="PASS" signature="logging_In_With_Valid_Credentials_Should_Load_Home_Page()[pri:0, instance:test.testHris@1f57539]" name="logging_In_With_Valid_Credentials_Should_Load_Home_Page" duration-ms="3588" started-at="2018-06-28T12:27:59Z" depends-on-methods="test.testHris.username_Field_Is_Empty_Should_Load_The_Same_Page_Again" finished-at="2018-06-28T12:28:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logging_In_With_Valid_Credentials_Should_Load_Home_Page -->
+        <test-method status="PASS" signature="Total_Time_Shown_In_HRIS_Timesheet_Should_Be_Correct()[pri:0, instance:test.testHris@1f57539]" name="Total_Time_Shown_In_HRIS_Timesheet_Should_Be_Correct" duration-ms="1519" started-at="2018-06-28T12:28:02Z" depends-on-methods="test.testHris.logging_In_With_Valid_Credentials_Should_Load_Home_Page" finished-at="2018-06-28T12:28:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Total_Time_Shown_In_HRIS_Timesheet_Should_Be_Correct -->
+        <test-method status="PASS" signature="after_Clicking_On_Logout_Button_User_Should_Be_Able_To_See_Copyright_Text()[pri:0, instance:test.testHris@1f57539]" name="after_Clicking_On_Logout_Button_User_Should_Be_Able_To_See_Copyright_Text" duration-ms="1295" started-at="2018-06-28T12:28:04Z" depends-on-methods="test.testHris.Total_Time_Shown_In_HRIS_Timesheet_Should_Be_Correct" finished-at="2018-06-28T12:28:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after_Clicking_On_Logout_Button_User_Should_Be_Able_To_See_Copyright_Text -->
+        <test-method status="PASS" signature="after_Clicking_On_Logout_Button_User_Should_Redirect_To_Login_Page()[pri:0, instance:test.testHris@1f57539]" name="after_Clicking_On_Logout_Button_User_Should_Redirect_To_Login_Page" duration-ms="17" started-at="2018-06-28T12:28:05Z" depends-on-methods="test.testHris.after_Clicking_On_Logout_Button_User_Should_Be_Able_To_See_Copyright_Text" finished-at="2018-06-28T12:28:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- after_Clicking_On_Logout_Button_User_Should_Redirect_To_Login_Page -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:test.testHris@1f57539]" name="closeBrowser" is-config="true" duration-ms="731" started-at="2018-06-28T12:28:05Z" finished-at="2018-06-28T12:28:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- test.testHris -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

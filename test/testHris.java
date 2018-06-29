@@ -40,7 +40,7 @@ public class testHris
 	@Test(dependsOnMethods = {"username_Field_Is_Empty_Should_Load_The_Same_Page_Again"})
 	public void logging_In_With_Valid_Credentials_Should_Load_Home_Page()
 	{
-		check_credentials_passed_for_login.fill_Fields("lokeshbisht", "Lokesh@321#");
+		check_credentials_passed_for_login.fill_Fields("", "");     //login credentials
 		assertEquals(driver.getCurrentUrl(),"https://hris.qainfotech.com:8086/time/timesheet");
 	}
 	

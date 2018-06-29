@@ -38,6 +38,34 @@ public class testHris
 	}
 	
 	@Test(dependsOnMethods = {"username_Field_Is_Empty_Should_Load_The_Same_Page_Again"})
+	
+	public void username_Input_Box_Border_Should_Become_Visible_If_Username_Field_Is_Empty()
+	{
+		check_credentials_passed_for_login.fill_Fields("", "abc");
+		WebElement username_txt_box = driver.findElement(By.xpath("//*[@id='login']/form/input[1]"));
+		String style = username_txt_box.getAttribute("style");
+		Assert.assertTrue(style.contains("border"));
+	}
+	
+	@Test(dependsOnMethods = {"username_Input_Box_Border_Should_Become_Visible_If_Username_Field_Is_Empty"})
+	public void password_Input_Box_Border_Should_Become_Visible_If_Password_Field_Is_Empty()
+	{
+		check_credentials_passed_for_login.fill_Fields("abc", "");
+		WebElement username_txt_box = driver.findElement(By.id("txtPassword"));
+		String style = username_txt_box.getAttribute("style");
+		Assert.assertTrue(style.contains("border"));
+	}
+	
+	/*@Test(dependsOnMethods = {"password_Input_Box_Border_Should_Become_Visible_If_Username_Field_Is_Empty"})
+	public void forgot_Password_Button_Should_Work()
+	{
+		check_credentials_passed_for_login.forgot_Password();
+		System.out.println(driver.getCurrentUrl());
+		System.out.println(driver.findElement(By.xpath("//*[@id='content']/h1")).getText().contains("QA InfoTech Password Manager"));
+		Assert.assertTrue(driver.findElement(By.xpath("//*[@id='content']/h1")).getText().contains("QA InfoTech Password Manager"));
+	}*/
+	
+	@Test(dependsOnMethods = {"password_Input_Box_Border_Should_Become_Visible_If_Password_Field_Is_Empty"})
 	public void logging_In_With_Valid_Credentials_Should_Load_Home_Page()
 	{
 		check_credentials_passed_for_login.fill_Fields("lokeshbisht", "Lokesh@321#");
@@ -62,7 +90,7 @@ public class testHris
 	}
 	
 	@Test(dependsOnMethods = {"after_Clicking_On_Logout_Button_User_Should_Be_Able_To_See_Copyright_Text"})
-	public void after_Clicking_On_Logout_Button_User_Should_Redirect_To_Login_Page()
+	public void after_Clicking_On_Logout_Button_User_Should_Be_Redirected_To_Login_Page()
 	{
 		assertEquals(driver.getCurrentUrl(),"https://hris.qainfotech.com/login.php");
 	}
